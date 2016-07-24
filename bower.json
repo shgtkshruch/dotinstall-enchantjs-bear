@@ -1,0 +1,11 @@
+{
+  "name": "dotinstall-enchanjs-kuma",
+  "dependencies": {
+    "enchant.js": "0.6.2"
+  },
+  "overrides": {
+    "enchant.js": {
+      "main": "enchant.js"
+    }
+  }
+}
