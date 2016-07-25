@@ -35,10 +35,17 @@
     timeLabel.x = 5;
     timeLabel.y = 5;
 
+    const resultLabel = new Label('Your score: 0');
+    resultLabel.x = 0;
+    resultLabel.y = canvasSize / 2;
+    resultLabel.textAlign = 'center';
+    resultLabel.color = 'red';
+
     core.on('enterframe', function (e) {
       timeLabel.text = `Time: ${--timeLeft}`;
       if (timeLeft <= 0) {
-        alert(`Your score: ${score}`);
+        resultLabel.text = `Your score: ${score}`;
+        core.rootScene.addChild(resultLabel);
         this.stop();
       }
     });
