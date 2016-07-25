@@ -8,7 +8,7 @@
   const bearArea = canvasSize - spriteSize * 2;
 
   const core = new Core(canvasSize, canvasSize);
-  core.preload('../images/chara1.png');
+  core.preload('images/chara1.png');
   core.fps = 15;
 
   let score = 0;
@@ -19,7 +19,7 @@
     bear.x = rand(bearArea);
     bear.y = rand(bearArea);
     bear.frame = 0;
-    bear.image = core.assets['../images/chara1.png'];
+    bear.image = core.assets['images/chara1.png'];
 
     bear.on('touchstart', function (e) {
       scoreLabel.text = `Score: ${++score}`;
